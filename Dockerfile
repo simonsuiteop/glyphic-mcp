@@ -1,8 +1,11 @@
 FROM node:22-slim
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev
-COPY dist/ ./dist/
+RUN npm ci
+COPY src/ ./src/
+COPY tsconfig.json ./
+RUN npx tsc
+RUN npm prune --omit=dev
 ENV TRANSPORT=http
 ENV PORT=3000
 EXPOSE 3000
