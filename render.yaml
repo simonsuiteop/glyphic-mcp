@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: glyphic-mcp
+    runtime: docker
+    plan: free
+    envVars:
+      - key: GLYPHIC_API_KEY
+        sync: false
+      - key: TRANSPORT
+        value: http
+      - key: PORT
+        value: "3000"

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "glyphic": {
+      "command": "node",
+      "args": ["/Users/maximesimona.seroussi/Vibe Code Projects/Glyphic MCP/dist/index.js"],
+      "env": {
+        "GLYPHIC_API_KEY": "YOUR_API_KEY_HERE"
+      }
+    }
+  }
+}
